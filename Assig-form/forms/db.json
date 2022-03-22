@@ -1,0 +1,31 @@
+{
+  "formData": [
+    {
+      "name": "Abhijeet Dharme",
+      "age": "22",
+      "address": "At Post Bordi Ta-Akot , Dist-Akola",
+      "department": "Non-Technical",
+      "salary": "20000",
+      "isMarried": "",
+      "id": 1
+    },
+    {
+      "name": "adi",
+      "age": "22",
+      "address": "At akot",
+      "department": "Non-Technical",
+      "salary": "2000",
+      "isMarried": true,
+      "id": 2
+    },
+    {
+      "name": "abhi Dharme",
+      "age": "22",
+      "address": "pune",
+      "department": "Non-Technical",
+      "salary": "2223",
+      "isMarried": true,
+      "id": 3
+    }
+  ]
+}
