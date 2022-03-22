@@ -1,0 +1,22 @@
+.redtext{
+    color: red;
+}
+textarea{
+    resize: none;
+}
+#button{
+    color: black;
+    background-color: gray;
+    
+}
+td{
+    border: 1px solid red;
+    max-width: 500px;
+}
+#img{
+    width: 200px;
+    height: 250px;
+}
+body{
+    display: flex;
+}
