@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "Walking",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "running",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "reading",
+      "status": false,
+      "id": 3
+    }
+  ]
+}
