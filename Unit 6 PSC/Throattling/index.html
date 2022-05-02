@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btn">Click</button>
+        <p></p>
+    </div>
+</body>
+</html>
+
+<script>
+
+const btn = document.getElementById("btn");
+
+const throat = (func , delay)=>{
+    let prev =0;
+    return (...args)=>{
+        let now = new Date().getTime();
+        console.log(now-prev , delay);
+        if(now-prev > delay){
+            prev = now;
+            return func(...args)
+        }
+    }
+}
+
+btn.addEventListener("click" , throat(()=>{
+    console.log("button click")
+    document.querySelector("p").append("button click")
+},3000))
+
+</script>
