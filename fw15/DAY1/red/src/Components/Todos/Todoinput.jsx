@@ -13,6 +13,9 @@ const handleSubmit = () => {
         title: text,
         dispatch
     })
+    .then(()=>alert("done"))
+    .then(()=>getTodos(dispatch))
+    .catch((err)=>console.log(err.massege))
     
 }
   return (

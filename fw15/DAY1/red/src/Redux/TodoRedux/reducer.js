@@ -33,7 +33,6 @@ export const todoreducer = (store = initSate , action) =>{
        // console.log(payload)
         return{...store,
             loading:false,
-        todos: action.payload,
         error:false
      }    
      case ADD_TODOS_FAILURE:

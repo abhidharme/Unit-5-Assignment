@@ -26,8 +26,8 @@ export const gettodosFailure = ()=>({
 export const getTodos = (dispatch) =>{
     dispatch(gettodosRequest());
     axios({
-        url: "http://localhost:8080/grocery",
-        method: "GE T"
+        url: "https://json-server-mocker-masai.herokuapp.com/tasks",
+        method: "GET"
     })
     .then((res) => {
         dispatch(gettodosSuccess(res.data))
@@ -41,16 +41,16 @@ export const getTodos = (dispatch) =>{
 
 
 export const addtodosRequest = ()=>({
-    type:GET_TODOS_REQUEST
+    type:ADD_TODOS_REQUEST
 })
 
 export const addtodosSuccess = (data) => ({
-    type: GET_TODOS_SUCCESS , 
+    type: ADD_TODOS_SUCCESS , 
     payload: data
 }) ;
 
 export const addtodosFailure = ()=>({
-    type:GET_TODOS_FAILURE
+    type:ADD_TODOS_FAILURE
 })
 
 
@@ -58,8 +58,8 @@ export const addtodosFailure = ()=>({
 export const addTodos = ({title,dispatch}) =>{
     dispatch(addtodosRequest());
     return axios({
-        url: "http://localhost:8080/grocery",
-        method: " POST",
+        url: "https://json-server-mocker-masai.herokuapp.com/tasks",
+        method: "POST",
         data:{
             title,
             status:false
