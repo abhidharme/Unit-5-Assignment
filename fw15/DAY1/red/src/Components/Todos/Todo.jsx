@@ -1,21 +1,24 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { getTodos } from '../../Redux/TodoRedux/action';
-import { Todoinput } from './Todoinput';
-import { TodoList } from './TodoList';
+import Navbar from '../Navbar/Navbar';
+import  Todoinput  from './Todoinput';
+import  TodoList  from './TodoList';
 
 
-export const Todo = () => {
+const Todo = () => {
 
     const dispatch = useDispatch();
     
     useEffect(() =>{
-     getTodos(dispatch);
+     dispatch(getTodos());
     },[])
 
 
   return (
     <div>
+    <Navbar/>
+    <br></br>
     <Todoinput/>
     <br></br>
     <hr></hr>
@@ -24,3 +27,4 @@ export const Todo = () => {
     </div>
   )
 }
+export default Todo

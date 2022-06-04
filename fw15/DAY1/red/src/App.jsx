@@ -1,4 +1,5 @@
-import { Todo } from "./Components/Todos/Todo"
+import Routers from "./Routing/Routers"
+
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-     <Todo/>
+ <Routers/>
     </div>
   )
 }

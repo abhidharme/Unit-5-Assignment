@@ -1,7 +1,49 @@
 {
-    "grocery":[{
-        "id":1,
-        "title":"new",
-        "status":false
-    }]
+  "grocery": [
+    {
+      "id": 1,
+      "title": "new",
+      "status": false
+    },
+    {
+      "title": "",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "kjhkshd",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Abjoop",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "",
+      "status": false,
+      "id": 5
+    }
+  ],
+  "user": [
+    {
+      "name": "Abhijeet Dharme",
+      "email": "abhijeetdharme2015@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Abhijeet Dharme",
+      "email": "abhijeet_fw14_289@masai.school",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "asa",
+      "email": "a@agmail.com",
+      "password": "123",
+      "id": 3
+    }
+  ]
 }

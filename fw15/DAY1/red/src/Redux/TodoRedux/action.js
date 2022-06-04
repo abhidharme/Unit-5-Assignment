@@ -23,10 +23,10 @@ export const gettodosFailure = ()=>({
 
 
 
-export const getTodos = (dispatch) =>{
+export const getTodos = () => (dispatch) =>{
     dispatch(gettodosRequest());
-    axios({
-        url: "https://json-server-mocker-masai.herokuapp.com/tasks",
+  return axios({
+        url: "http://localhost:8080/grocery",
         method: "GET"
     })
     .then((res) => {
@@ -55,10 +55,10 @@ export const addtodosFailure = ()=>({
 
 
 
-export const addTodos = ({title,dispatch}) =>{
+export const addTodos = ({title })=> (dispatch) =>{
     dispatch(addtodosRequest());
     return axios({
-        url: "https://json-server-mocker-masai.herokuapp.com/tasks",
+        url: "http://localhost:8080/grocery",
         method: "POST",
         data:{
             title,

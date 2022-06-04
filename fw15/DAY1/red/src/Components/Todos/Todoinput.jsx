@@ -2,19 +2,18 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodos, getTodos } from '../../Redux/TodoRedux/action';
 
-export const Todoinput = () => {
+ const Todoinput = () => {
 
 const [text , setText] = useState("");
 
 const dispatch = useDispatch();
 
 const handleSubmit = () => {
-    addTodos({
-        title: text,
-        dispatch
-    })
+  dispatch(addTodos({
+        title: text, 
+    }))
     .then(()=>alert("done"))
-    .then(()=>getTodos(dispatch))
+    .then(()=>{dispatch(getTodos())})
     .catch((err)=>console.log(err.massege))
     
 }
@@ -26,3 +25,5 @@ const handleSubmit = () => {
     </div>
   )
 }
+
+export default  Todoinput

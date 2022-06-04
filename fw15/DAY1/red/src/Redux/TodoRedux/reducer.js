@@ -18,7 +18,8 @@ export const todoreducer = (store = initSate , action) =>{
                 loading:false,
             todos: action.payload,
             error:false
-         }    
+         } 
+            
          case GET_TODOS_FAILURE:
              return{...store,
             loading:false,
