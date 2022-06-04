@@ -1,6 +1,7 @@
 export const LOGIN_LOADING = "LOGIN_LOADING"
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
 export const LOGIN_FAIL  = "LOGIN_FAIL"
+export const LOGOUT = "LOGOUT";
 import axios from "axios";
 
 export const loginLoading = ()=> ({
@@ -16,6 +17,12 @@ export const loginFail = ()=> ({
     type: LOGIN_FAIL
   });
 
+  
+const logout = ()=> ({
+  type: LOGOUT
+});
+
+export default logout
 
   export const LoginData  = (cred)=> (dispatch)=>{
     dispatch(loginLoading());

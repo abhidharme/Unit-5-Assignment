@@ -1,8 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import  logout  from '../../Redux/LoginRedux/action';
 
 const Navbar = () => {
 
+  const dispatch = useDispatch();
  
   return (
     <div style={{background:"red", display:"flex" , height:"50px" , justifyContent:"space-around"}}>
@@ -12,7 +15,7 @@ const Navbar = () => {
     <div>
     <Link style={{color:"white" }}  to="/login">Login</Link>
     </div>
-    <div><Link to="/login"  style={{color:"white" }} >Logout</Link></div>
+    <div><Link to="/login" onClick={()=>dispatch(logout())}  style={{color:"white" }} >Logout</Link></div>
     </div>
   )
 }

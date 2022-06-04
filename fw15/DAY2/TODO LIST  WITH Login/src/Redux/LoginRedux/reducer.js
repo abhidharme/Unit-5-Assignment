@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { LOGIN_FAIL, LOGIN_LOADING, LOGIN_SUCCESS } from "./action";
+import { LOGIN_FAIL, LOGIN_LOADING, LOGIN_SUCCESS , LOGOUT} from "./action";
 
 const initState = {
     loading: false,
@@ -20,7 +20,6 @@ const initState = {
             };
         case LOGIN_SUCCESS:
            // console.log(users)
-            localStorage.setItem("userData", JSON.stringify({isAuth:true}))
             return {
                 ...store,
                 loading: false,
@@ -37,6 +36,8 @@ const initState = {
                 users:null,
                 error: true
             }
+         case LOGOUT:
+             return{...initState}  
             default:
             return store;
     }
